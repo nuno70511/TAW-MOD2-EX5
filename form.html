@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form</title>
+</head>
+<body>
+    <h1>Registration Form</h1>
+
+    <form action="form.html" method="POST" id="form1">
+        <fieldset>
+            <legend>Personal info</legend>
+
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" pattern="[A-Z][a-z]+\s[A-Z][a-z]+S" required><br>
+
+            <label for="membership">Membership:</label><br>
+            <label><input type="radio" name="membership" id="member"value="member">Member</label><br>
+            <label><input type="radio" name="membership" id="non-member" value="non-member">Non-Member</label><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email">
+        </fieldset>
+    </form>
+
+    <fieldset>
+        <legend>Reservation info</legend>
+        <label for="facility">Facility:</label>
+        <select name="facility" id="facility">
+            <option value="badmington">Badmington</option>
+            <option value="squash">Squash</option>
+            <option value="racquetball">Racquetball</option>
+        </select>
+        <label for="date">Date:</label>
+        <input type="datetime-local" name="date" id="date" required>
+    </fieldset>
+
+    <input type="checkbox" name="policy" id="policy">
+    <label for="policy">I agree to the club’s reservation policy</label>
+    <br>
+
+    <input type="submit" form="form1">
+    
+</body>
+</html>
